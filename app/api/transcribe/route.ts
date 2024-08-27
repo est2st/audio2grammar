@@ -25,7 +25,7 @@ export async function POST(request: Request) {
       language: 'en-US',
     })
     
-
+    // @ts-ignore
     return NextResponse.json({ transcript: result.results.channels[0].alternatives[0].transcript })
   } catch (error) {
     console.error('Error:', error)
